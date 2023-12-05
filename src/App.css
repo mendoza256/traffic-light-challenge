@@ -1,0 +1,39 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+body {
+  background-color: black;
+}
+
+#traffic-light {
+  width: 300px;
+  height: 500px;
+  background-color: rgb(53, 51, 51);
+  border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.light {
+  background-color: rgb(82, 82, 82);
+  height: 100%;
+  border-radius: 1000px;
+}
+
+.red.active {
+  background-color: rgb(242, 0, 0);
+}
+
+.yellow.active {
+  background-color: rgb(206, 144, 0);
+}
+
+.green.active {
+  background-color: rgb(10, 175, 10);
+}
