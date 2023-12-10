@@ -6,34 +6,69 @@
 }
 
 body {
-  background-color: black;
+  background: linear-gradient(
+    to bottom,
+    #163c52 0%,
+    #4f4f47 30%,
+    #c5752d 60%,
+    #b7490f 80%,
+    #2f1107 100%
+  );
 }
 
 #traffic-light {
-  width: 300px;
+  width: 200px;
   height: 500px;
-  background-color: rgb(53, 51, 51);
-  border-radius: 40px;
+  background-color: black;
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 20px;
   padding: 20px 0;
+  position: relative;
+  z-index: 1;
+}
+
+#traffic-light::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 50%;
+  transform: translateX(50%);
+  z-index: -1;
+  width: 25%;
+  height: 100vh;
+  background-color: black;
 }
 
 .light {
   background-color: rgb(82, 82, 82);
-  height: 100%;
   border-radius: 1000px;
+  transition: all 0.25s ease-in-out;
+  height: 150px;
+  width: 150px;
 }
 
 .red.active {
   background-color: rgb(242, 0, 0);
+  color: rgb(242, 0, 0);
 }
 
 .yellow.active {
   background-color: rgb(206, 144, 0);
+  color: rgb(206, 144, 0);
 }
 
 .green.active {
   background-color: rgb(10, 175, 10);
+  color: rgb(10, 175, 10);
+}
+
+.active {
+  box-shadow: 0 0 20px 10px currentColor;
 }
